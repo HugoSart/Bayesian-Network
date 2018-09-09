@@ -7,4 +7,4 @@ def __main__():
     evaluator.parse_data_csv('data/car.csv')
 
 
-__main__()
+__main__() #d dsasd
