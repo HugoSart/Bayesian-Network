@@ -6,19 +6,19 @@ TRUE = 1
 
 
 class BayesianNetwork:
-    class Nodes(enumerate):
-        asia = Categorical
-        smoke = Categorical
-        tub = Mixture
-        lung = Mixture
-        bronc = Mixture
-        either = MultiMixture
-        xray = Mixture
-        dysp = MultiMixture
+
+    asia = Categorical
+    smoke = Categorical
+    tub = Mixture
+    lung = Mixture
+    bronc = Mixture
+    either = MultiMixture
+    xray = Mixture
+    dysp = MultiMixture
 
     def create_network(self):
         print("LOG -> Creating bayesian network ...")
-        n = self.Nodes
+        n = self
 
         ap1 = 0.9999999999999999
         ap0 = 0.0000000000000001
@@ -35,7 +35,7 @@ class BayesianNetwork:
         print("LOG -> Bayesian network successfully created!")
 
     def show_result_as_table(self):
-        n = self.Nodes
+        n = self
 
         precision = "%.2f"
         space = "           | "
@@ -68,7 +68,7 @@ class BayesianNetwork:
 
     def run_inference(self):
         print("LOG -> Running inference ...")
-        n = self.Nodes
+        n = self
 
         Q = VB(
             n.dysp,
