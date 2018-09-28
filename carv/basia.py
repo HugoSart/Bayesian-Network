@@ -1,7 +1,7 @@
-from basia.bayesian_network import BayesianNetwork
+from carv.bayesian_network import BayesianNetwork
 import argparse
 
-from basia.tests import run_all_tests
+from carv.tests import run_all_tests
 
 
 def parse_arguments():

@@ -1,4 +1,4 @@
-from basia.bayesian_network import BayesianNetwork
+from carv.bayesian_network import BayesianNetwork
 
 FALSE = 0
 TRUE = 1
@@ -32,7 +32,7 @@ def either_lug_tub_test():
     return round(b, 4) == 1.0
 
 
-def either_lug_tub_test():
+def either_lug_tub_test2():
     evaluator = BayesianNetwork()
     evaluator.create_network()
     evaluator.lung.observe(FALSE)
@@ -42,7 +42,7 @@ def either_lug_tub_test():
     return round(b, 4) == 1.0
 
 
-def either_lug_tub_test2():
+def either_lug_tub_test3():
     evaluator = BayesianNetwork()
     evaluator.create_network()
     evaluator.lung.observe(FALSE)
@@ -52,7 +52,7 @@ def either_lug_tub_test2():
     return round(b, 4) == 0
 
 
-def either_lug_tub_test3():
+def either_lug_tub_test4():
     evaluator = BayesianNetwork()
     evaluator.create_network()
     evaluator.lung.observe(TRUE)
@@ -69,9 +69,11 @@ def run_all_tests():
     eltt = either_lug_tub_test()
     eltt2 = either_lug_tub_test2()
     eltt3 = either_lug_tub_test3()
+    eltt3 = either_lug_tub_test4()
 
     print("test1 = " + str(at))
     print("test2 = " + str(tat))
     print("test3 = " + str(eltt))
     print("test4 = " + str(eltt2))
     print("test5 = " + str(eltt3))
+    print("test6 = " + str(eltt3))
